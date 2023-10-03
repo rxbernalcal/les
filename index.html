@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Secret</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        #poema {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: black;
+        }
+        .login-form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top Secret</h1>
+    </header>
+    <div id="poema">
+        <p>Quiero que estés conmigo toda la vida,</p>
+        <p>como un verso eterno de Pablo Neruda,</p>
+        <p>en cada página de mi historia,</p>
+        <p>en cada latido de mi corazón.</p>
+        <p>Eres el sol que ilumina mis días,</p>
+        <p>la luna que guía mis noches,</p>
+        <p>mi razón de ser y mi felicidad.</p>
+        <p>Te amo más allá de las palabras,</p>
+        <p>y quiero que estemos juntos para siempre.</p>
+        <!-- Más versos del poema de Pablo Neruda aquí -->
+    </div>
+    <div class="login-form" id="login-form">
+        <h2>Iniciar Sesión</h2>
+        <form>
+            <input type="text" id="username" placeholder="Usuario" required><br>
+            <input type="password" id="password" placeholder="Contraseña" required><br>
+            <button type="button" onclick="login()">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "lesxale" && password === "xinfinito") {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("poema").style.display = "block";
+            } else {
+                alert("Credenciales incorrectas. Intenta de nuevo.");
+            }
+        }
+    </script>
+</body>
+</html>
